@@ -2,6 +2,18 @@ body{
   background-color: #ccdbea
 }
 
+.container{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 250px;
+    height: auto;
+    width: 600px;
+    flex-wrap: wrap;
+}
+
 .sound-icon{
     background-color: transparent;
     display: flex;
@@ -21,8 +33,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
 }
 
 img {
@@ -34,6 +44,7 @@ img {
     width: auto;
     height: 100%;
     opacity: .5;
+    cursor: pointer;
 }
 
 a{
@@ -52,7 +63,7 @@ input[type=range] {
     background-color: #abc3dc;
     cursor: pointer;
     /* -webkit-appearance: none; */
-    width: 50%;
+    /* width: 50%; */
     max-width: 150px;
     border-radius: 100px;
 }

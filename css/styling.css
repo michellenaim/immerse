@@ -2,6 +2,67 @@ body{
   background-color: #ccdbea
 }
 
+.header{
+    height: 80px;
+    /* background-color: lightgreen; */
+    box-shadow: 0 3px 3px rgba(80, 80, 80, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: #5b86b5;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 200px;
+}
+
+.logo > img {
+    height: 50px;
+    opacity: 1;
+    margin-right: 5px;
+}
+
+.buttons{
+    font-size: 30px;
+    opacity: 0.6;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.description{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #5b86b5;
+    margin-top: 20px;
+}
+
+.description > p {
+    margin: 10px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row1, .row2, .row3, .row4{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
 .container{
     background-color: transparent;
     display: flex;
@@ -10,7 +71,7 @@ body{
     align-items: center;
     min-height: 250px;
     height: auto;
-    width: 600px;
+    width: 85%;
     flex-wrap: wrap;
 }
 
@@ -21,8 +82,9 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 250px;
-    height: auto;
-    margin-bottom: 1em;
+    width: 160px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .icon{
@@ -35,7 +97,11 @@ body{
     align-items: center;
 }
 
-img {
+img{
+    opacity: 0.4;
+}
+
+.icon > img {
     z-index: 1;
     position: absolute;
     top: 50%;
@@ -43,8 +109,9 @@ img {
     transform: translateX(-50%) translateY(-50%);
     width: auto;
     height: 100%;
-    opacity: .5;
     cursor: pointer;
+    transition: opacity 2s;
+    color: blue;
 }
 
 a{
@@ -77,6 +144,15 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
-img > .playing {
-  opacity: 1;
+.blue{
+    background-color: darkblue;
+}
+
+.volume-slider{
+    opacity: 0;
+}
+
+.playing{
+    transition: opacity 2s;
+    opacity: 0.8;
 }

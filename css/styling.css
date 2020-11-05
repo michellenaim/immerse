@@ -9,6 +9,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 40px;
 
 }
 
@@ -48,6 +49,7 @@ body{
 
 .description > p {
     margin: 10px;
+    margin-top: 20px;
 }
 
 .main{
@@ -144,10 +146,6 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
-.blue{
-    background-color: darkblue;
-}
-
 .volume-slider{
     opacity: 0;
 }
@@ -155,4 +153,53 @@ input[type=range]::-webkit-slider-thumb {
 .playing{
     transition: opacity 2s;
     opacity: 0.8;
+}
+
+.rain{
+    background-image: url("/icons/rain.png");
+    background-size: cover;
+}
+
+.bird{
+    background-color: darkblue;
+}
+
+.cat{
+    background-color: darkblue;
+}
+
+.fire{
+    background-color: darkblue;
+}
+
+.lake{
+    background-color: darkblue;
+}
+
+.leaf{
+    background-color: darkblue;
+}
+
+.night{
+    background-color: darkblue;
+}
+
+.ocean{
+    background-color: darkblue;
+}
+
+.river{
+    background-color: darkblue;
+}
+
+.thunder{
+    background-color: darkblue;
+}
+
+.wind{
+    background-color: darkblue;
+}
+
+.car{
+    background-color: lime;
 }

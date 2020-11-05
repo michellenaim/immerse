@@ -1,7 +1,13 @@
 // PLAY PAUSE SOUNDS LINKED TO IMG & SLIDER
-
 function initAudioPlayer(){
-    icons = document.getElementsByClassName("icon");
+    
+    let icons = document.getElementsByClassName("icon");
+    let rainId = document.getElementById('rain');
+    let carId = document.getElementById('car');
+    
+    let map = new Map;
+    map.set(rainId, {})
+
     for (let i = 0; i < icons.length; i++){
         let icon = icons[i];
         let audio = icon.nextElementSibling;
@@ -16,10 +22,17 @@ function initAudioPlayer(){
                 audio.play();
                 icon.children[0].classList.add('playing')
                 volumeSlider.classList.add('playing')
+
+                // grab div id
+                // set class as id
+                document.body.classList.add(icon.id)
+                // document.body.classList.add("blue")
+                setTimeout(function(){ document.body.classList.remove(icon.id)}, 3000)
             } else {
                 audio.pause();
                 icon.children[0].classList.remove('playing')
-                volumeSlider.classList.remove('playing')            }
+                volumeSlider.classList.remove('playing')
+            }
         });
 
         // Set up slider
@@ -27,29 +40,24 @@ function initAudioPlayer(){
             console.log(event.currentTarget.value)
             audio.volume = event.currentTarget.value
         });
+
+        // debugger
+        
+        // console.log()
+
+        // icon.addEventListener("click", function(event) {
+        //     if (icon === rainId) {
+        //         document.body.classList.add("blue")
+        //     } 
+        // })
     }
+
 }
 
 window.addEventListener("load", initAudioPlayer);
 
 // BACKGROUND CHANGES
 
-icons = document.getElementsByClassName("icon");
-
-for (let i = 0; i < icons.length; i++){
-    let icon = icons[i];
-    let audio = icon.nextElementSibling;
-    let volumeSlider = audio.nextElementSibling;
-
-    rainId = document.getElementById('rain');
-    carId = document.getElementById('car');
-
-    icon.addEventListener("click", function(event) {
-        if (icon === carId){
-            document.body.classList.add("blue")
-        }
-    })
-}
 
 // MUTE BUTTON
 

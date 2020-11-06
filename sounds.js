@@ -2,11 +2,6 @@
 function initAudioPlayer(){
     
     let icons = document.getElementsByClassName("icon");
-    let rainId = document.getElementById('rain');
-    let carId = document.getElementById('car');
-    
-    let map = new Map;
-    map.set(rainId, {})
 
     for (let i = 0; i < icons.length; i++){
         let icon = icons[i];
@@ -23,10 +18,8 @@ function initAudioPlayer(){
                 icon.children[0].classList.add('playing')
                 volumeSlider.classList.add('playing')
 
-                // grab div id
-                // set class as id
+                // add background for 3s
                 document.body.classList.add(icon.id)
-                // document.body.classList.add("blue")
                 setTimeout(function(){ document.body.classList.remove(icon.id)}, 3000)
             } else {
                 audio.pause();
@@ -41,49 +34,42 @@ function initAudioPlayer(){
             audio.volume = event.currentTarget.value
         });
 
-        // debugger
         
-        // console.log()
-
-        // icon.addEventListener("click", function(event) {
-        //     if (icon === rainId) {
-        //         document.body.classList.add("blue")
-        //     } 
-        // })
     }
+
+    // MUTE BUTTON
+
+    let mute = document.querySelector(".mute")
+    let unmute = document.querySelector(".unmute")
+
+    mute.addEventListener('click', function(){
+        for(let i = 0; i < icons.length; i++){
+            let icon = icons[i];
+            let audio = icon.nextElementSibling;
+
+            audio.muted = true
+        }
+
+        mute.style.display="none";
+        unmute.style.display="inline";
+    });
+
+    unmute.addEventListener('click', function(){
+        for(let i = 0; i < icons.length; i++){
+            let icon = icons[i];
+            let audio = icon.nextElementSibling;
+
+            audio.muted = false
+        }
+        mute.style.display="inline";
+        unmute.style.display="none";
+    });
 
 }
 
 window.addEventListener("load", initAudioPlayer);
 
-// BACKGROUND CHANGES
 
 
-// MUTE BUTTON
 
-// var playing_sounds = [];
-// function muteDocument() {
-// 	if (!is_muted) {
-// 		playing_sounds.length=0;
-// 		is_muted = true;
-// 		document.querySelector('.unmuted').style.display="none";
-// 		document.querySelector('.muted').style.display="inline";
-// 		var all_audio = document.querySelectorAll('audio');
-// 		for (var i = 0; i < all_audio.length; i++) {
-// 			if(!all_audio[i].paused){
-// 				playing_sounds.push([all_audio[i],all_audio[i].volume]);
-// 			}	
-// 		}
-// 		playing_sounds.forEach(function (sound) {
-// 			sound[0].volume=0;
-// 		});
-// 	}
-// 	else{
-// 		is_muted = false;
-// 		document.querySelector('.unmuted').style.display="inline";
-// 		document.querySelector('.muted').style.display="none";
-// 		playing_sounds.forEach(function (sound) {
-// 			sound[0].volume=sound[1];
-// 		});
-// 	}
-// }
+    

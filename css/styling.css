@@ -10,7 +10,6 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
-
 }
 
 .logo {
@@ -27,7 +26,25 @@ body{
 .logo > img {
     height: 50px;
     opacity: 1;
-    margin-right: 5px;
+    margin-right: 10px;
+}
+
+a > img {
+    height: 34px;
+    cursor: pointer;
+}
+
+.unmute{
+    cursor: pointer;
+}
+
+.mute{
+    cursor: pointer;    
+}
+
+.fa-sync-alt{
+    font-size: 27px;
+    cursor: pointer;
 }
 
 .buttons{
@@ -37,6 +54,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-right: 20px;
 }
 
 .description{
@@ -99,7 +117,7 @@ body{
     align-items: center;
 }
 
-img{
+.icon > img{
     opacity: 0.4;
 }
 
@@ -114,13 +132,6 @@ img{
     cursor: pointer;
     transition: opacity 2s;
     color: blue;
-}
-
-a{
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    display: block;
 }
 
 input[type=range] {

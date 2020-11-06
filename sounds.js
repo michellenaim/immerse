@@ -1,3 +1,5 @@
+let classes = []
+
 function audioPlayer(){
     
     let icons = document.getElementsByClassName("icon");
@@ -8,7 +10,6 @@ function audioPlayer(){
         let volumeSlider = audio.nextElementSibling;
         
         // PLAY/PAUSE SOUND
-
         icon.addEventListener("click", function(event) {
             if (audio.paused) {
                 audio.loop = true;
@@ -18,13 +19,23 @@ function audioPlayer(){
                 icon.children[0].classList.add('playing')
                 volumeSlider.classList.add('playing')
 
-                // add background for 3s
-                document.body.classList.add(icon.id)
-                setTimeout(function(){ document.body.classList.remove(icon.id)}, 3000)
+                // add different background colors
+                document.body.className = icon.id
+                classes.push(icon.id);
+                console.log(classes);
             } else {
                 audio.pause();
                 icon.children[0].classList.remove('playing')
                 volumeSlider.classList.remove('playing')
+                
+                let index = classes.indexOf(icon.id);
+                classes.splice(index, 1);
+                console.log(classes)
+                if (classes.length === 0) {
+                    document.body.className = 'default'
+                } else {
+                    document.body.className = classes[classes.length - 1]
+                }
             }
         });
 

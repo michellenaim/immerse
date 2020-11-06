@@ -167,62 +167,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .default{
-    background-color: #ccdbea;
-    -webkit-transition: background-color 3000ms linear;
-    -ms-transition: background-color 3000ms linear;
-    transition: background-color 3000ms linear;
-}
-
-.rain{
-    background-color: purple;
-    -webkit-transition: background-color 3000ms linear;
-    -ms-transition: background-color 3000ms linear;
-    transition: background-color 3000ms linear;
-}
-
-.bird{
-    background-color: yellow;
-    -webkit-transition: background-color 3000ms linear;
-    -ms-transition: background-color 3000ms linear;
-    transition: background-color 3000ms linear;
-}
-
-.cat{
-    background-color: darkblue;
-}
-
-.fire{
-    background-color: darkblue;
-}
-
-.lake{
-    background-color: darkblue;
-}
-
-.leaf{
-    background-color: darkblue;
-}
-
-.night{
-    background-color: darkblue;
-}
-
-.ocean{
-    background-color: darkblue;
-}
-
-.river{
-    background-color: darkblue;
-}
-
-.thunder{
-    background-color: darkblue;
-}
-
-.wind{
-    background-color: darkblue;
-}
-
-.car{
-    background-color: lime;
+    -webkit-transition: background-color 2000ms linear;
+    -ms-transition: background-color 2000ms linear;
+    transition: background-color 2000ms linear;
 }

@@ -1,5 +1,4 @@
-// PLAY PAUSE SOUNDS LINKED TO IMG & SLIDER
-function initAudioPlayer(){
+function audioPlayer(){
     
     let icons = document.getElementsByClassName("icon");
 
@@ -8,7 +7,8 @@ function initAudioPlayer(){
         let audio = icon.nextElementSibling;
         let volumeSlider = audio.nextElementSibling;
         
-        // Play/pause audio on click
+        // PLAY/PAUSE SOUND
+
         icon.addEventListener("click", function(event) {
             if (audio.paused) {
                 audio.loop = true;
@@ -28,13 +28,12 @@ function initAudioPlayer(){
             }
         });
 
-        // Set up slider
+        // SET UP SLIDER
         volumeSlider.addEventListener('input', function(event) {
             console.log(event.currentTarget.value)
             audio.volume = event.currentTarget.value
         });
 
-        
     }
 
     // MUTE BUTTON
@@ -65,9 +64,26 @@ function initAudioPlayer(){
         unmute.style.display="none";
     });
 
+    // RESET SOUNDS
+
+    let reset = document.querySelector('.reset');
+
+    reset.addEventListener('click', function(){
+        for (let i = 0; i < icons.length; i++) {
+            let icon = icons[i];
+            let audio = icon.nextElementSibling;
+            let volumeSlider = audio.nextElementSibling;
+            audio.pause();	
+            icon.children[0].classList.remove('playing')
+            volumeSlider.classList.remove('playing')
+            document.body.classList.remove(icon.id)
+        }
+    })
+
 }
 
-window.addEventListener("load", initAudioPlayer);
+
+window.addEventListener("load", audioPlayer);
 
 
 

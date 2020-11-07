@@ -26,6 +26,8 @@ Immerse is a web app that allows users to blend different sounds to create a per
 
 Immerse was built using Vanilla JavaScript, HTML and CSS.
 
+![]()
+
 ## Technologies
 
 * JavaScript

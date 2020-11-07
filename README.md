@@ -28,7 +28,7 @@ Immerse was built using Vanilla JavaScript, HTML and CSS.
 
 <p align="center">
     <a href="https://michellenaim.github.io/immerse/" target="_blank">
-        <img width="30%" src="logos/immerse_screenshot.jpg" alt="Immerse logo">
+        <img width="80%" src="logos/immerse_screenshot.jpg" alt="Immerse logo">
     </a>
 </p>
 

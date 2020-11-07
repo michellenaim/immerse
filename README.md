@@ -26,7 +26,11 @@ Immerse is a web app that allows users to blend different sounds to create a per
 
 Immerse was built using Vanilla JavaScript, HTML and CSS.
 
-![]()
+<p align="center">
+    <a href="https://michellenaim.github.io/immerse/" target="_blank">
+        <img width="30%" src="logos/immerse_screenshot.jpg" alt="Immerse logo">
+    </a>
+</p>
 
 ## Technologies
 

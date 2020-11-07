@@ -13,7 +13,9 @@
   * [About Immerse](#about-immerse)
   * [Technologies](#technologies)
   * [Features](#features)
-    * [Sounds (play/pause)](#sounds(play/pause))
+    * [Sounds](#sounds)
+        * [Play/Pause]
+        * [Mute/Reset]
     * [Sounds (mute/reset)](#movie-trailers-index)
     * [Background color](#genre-show)
     
@@ -32,8 +34,21 @@ Immerse was built using Vanilla JavaScript, HTML and CSS.
 
 ## Features
 
-#### Sounds (play/pause)
+#### Sounds
 
-#### Sounds (mute/reset)
++ Play/Pause
+    * Users can click on icons to play different sounds.
+    * When the user clicks on an icon, a volume slider will appear below it and the user will be able to adjust the sound.
+    * Users can click again on an icon to stop a specific sound from playing.
+    * There is a default low sounds for all icons.
+
++ Mute/Reset
+    * Users can click on a mute button to mute all sounds playing on the page.
+    * Users can also click on a reset button to unselect all icons that were previously selected and start from scratch.
 
 #### Background color
+
++ When users click on an icon, the background color of the page changes.
++ Each icon is assigned a different background color.
++ When users click on many different icons, the background colors blend (an average of the colors is computed to give the color shown).
++ When users unclick an icon, the background color assigned to that icon gets removed from the blend. A new blend appears with the active icons' background colors.
